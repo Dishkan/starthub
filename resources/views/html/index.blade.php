@@ -60,7 +60,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a style="font-size: 150%" href="index.html" class="navbar-brand"
+          <a style="font-size: 150%" href="{{url('/')}}" class="navbar-brand"
             >Start<span class="text-primary">Hub</span></a
           >
 
@@ -78,28 +78,28 @@
           <div class="navbar-collapse collapse" id="navbarContent">
             <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
               <li class="nav-item active">
-                <a href="index.html" class="nav-link">Main</a>
+                <a href="{{url('/')}}" class="nav-link">Main</a>
               </li>
               <li class="nav-item">
-                <a href="about.html" class="nav-link">About</a>
+                <a href="{{url('/about')}}" class="nav-link">About</a>
               </li>
               <li class="nav-item">
-                <a href="services.html" class="nav-link">Areas</a>
+                <a href="{{url('/areas')}}" class="nav-link">Areas</a>
               </li>
               <li class="nav-item">
-                <a href="portfolio.html" class="nav-link">Projects</a>
+                <a href="{{url('/projects')}}" class="nav-link">Projects</a>
               </li>
               <li class="nav-item">
-                <a href="blog.html" class="nav-link">News</a>
+                <a href="{{url('/news')}}" class="nav-link">News</a>
               </li>
               <li class="nav-item">
-                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="{{url('/contact')}}" class="nav-link">Contact</a>
               </li>
 
               @if (Route::has('login'))
                     @auth
                     <li class="nav-item">
-                        <a href="{{ url('/home') }}" class="nav-link">Home</a>
+                        <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
                     </li>
                     @else
                     <li>
@@ -111,11 +111,6 @@
                         </li>
                         @endif
                     @endauth
-            @endif
-            @if(Auth::user()) 
-            <a class="nav-link" href="{{route('home')}}" role="button">
-                                    {{ Auth::user()->name }}
-                                </a>
             @endif
 
             </ul>
@@ -210,7 +205,7 @@
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4 col-xl-3 py-3 mb-3">
               <div class="text-center">
-                <a href="sections/finance.html" style="color: black;">
+                <a href="{{url('/finance')}}" style="color: black;">
                 <div class="img-fluid mb-4">
                   <img
                     style="height: 60px; width: 60px"
@@ -395,7 +390,7 @@
               />
             </div>
             <div class="col-lg-6 py-6 mt-5" style="text-align: center">
-              <h2>Business Mentors</h2>
+              <h2>Business Experts</h2>
               <div class="row">
                 <div class="col-lg-12 py-12">
                   <p style="font-size: 110%">
@@ -1055,7 +1050,7 @@
                 </div>
                 <div class="body">
                   <div class="post-title">
-                    <a href="blog-single.html">What is Business Management?</a>
+                    <a href="{{url('show-single-news')}}">What is Business Management?</a>
                   </div>
                   <div class="post-excerpt">
                     Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -1064,7 +1059,7 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <a href="blog-single.html" style="border-radius: 70px;"
+                  <a href="{{url('show-single-news')}}" style="border-radius: 70px;"
                     >Read More <span class="mai-chevron-forward text-sm"></span
                   ></a>
                 </div>
@@ -1083,7 +1078,7 @@
                 </div>
                 <div class="body">
                   <div class="post-title">
-                    <a href="blog-single.html">What is Business Management?</a>
+                    <a href="{{url('show-single-news')}}">What is Business Management?</a>
                   </div>
                   <div class="post-excerpt">
                     Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -1092,7 +1087,7 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <a href="blog-single.html" style="border-radius: 70px;"
+                  <a href="{{url('show-single-news')}}" style="border-radius: 70px;"
                     >Read More <span class="mai-chevron-forward text-sm"></span
                   ></a>
                 </div>
@@ -1111,7 +1106,7 @@
                 </div>
                 <div class="body">
                   <div class="post-title">
-                    <a href="blog-single.html">What is Business Management?</a>
+                    <a href="{{url('show-single-news')}}">What is Business Management?</a>
                   </div>
                   <div class="post-excerpt">
                     Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -1120,7 +1115,7 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <a href="blog-single.html" style="border-radius: 70px;"
+                  <a href="{{url('show-single-news')}}" style="border-radius: 70px;"
                     >Read More <span class="mai-chevron-forward text-sm"></span
                   ></a>
                 </div>
@@ -1139,7 +1134,7 @@
                 </div>
                 <div class="body">
                   <div class="post-title">
-                    <a href="blog-single.html">What is Business Management?</a>
+                    <a href="{{url('show-single-news')}}">What is Business Management?</a>
                   </div>
                   <div class="post-excerpt">
                     Lorem, ipsum dolor sit amet consectetur adipisicing
@@ -1148,7 +1143,7 @@
                   </div>
                 </div>
                 <div class="footer">
-                  <a href="blog-single.html" style="border-radius: 70px;"
+                  <a href="{{url('show-single-news')}}" style="border-radius: 70px;"
                     >Read More <span class="mai-chevron-forward text-sm"></span
                   ></a>
                 </div>
@@ -1157,7 +1152,7 @@
           </div>
 
           <div class="text-center">
-            <a href="blog.html" class="btn btn-primary" style="border-radius: 70px;">View More</a>
+            <a href="{{url('news')}}" class="btn btn-primary" style="border-radius: 70px;">View More</a>
           </div>
         </div>
         <!-- .container -->

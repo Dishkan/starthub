@@ -20,8 +20,34 @@
                 <div class="card-body">
                 @if($projects)
                 <table style="width: 100%;">
+                <tr>
+                    <td style="color:cornflowerblue">
+                       #
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Name
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Description
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Review
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Achivements
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Section
+                    </td>
+                    <td style="color:cornflowerblue">
+                       Photo
+                    </td>
+                </tr>
                  @foreach($projects as $project)
                  <tr>
+                     <td>
+                         {{$project->id}}
+                     </td>
                      <td>
                          {{ $project->name }}
                      </td>

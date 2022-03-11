@@ -16,7 +16,40 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('html.index');
+})->name('main');
+
+Route::get('/about', function () {
+    return view('html.about');
 });
+
+Route::get('/areas', function () {
+    return view('html.services');
+});
+
+Route::get('/projects', function () {
+    return view('html.portfolio');
+});
+
+Route::get('/news', function () {
+    return view('html.blog');
+});
+
+Route::get('/contact', function () {
+    return view('html.contact');
+});
+
+Route::get('/show-single-news', function () {
+    return view('html.blog-single');
+});
+
+
+Route::get('/finance', function () {
+    return view('html.sections.finance');
+});
+Route::get('/finance/alif', function () {
+    return view('html.alif.alif');
+});
+
 
 Auth::routes();
 

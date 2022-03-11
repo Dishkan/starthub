@@ -11,7 +11,7 @@
   <title>StartHub</title>
 
   <link rel="stylesheet" href="../assets/css/bootstrap.css">
-  
+
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
@@ -54,33 +54,52 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a style="font-size: 150%;" href="index.html" class="navbar-brand">Start<span class="text-primary">Hub</span></a>
-
+      <a style="font-size: 150%" href="{{url('/')}}" class="navbar-brand"
+            >Start<span class="text-primary">Hub</span></a
+          >
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse collapse" id="navbarContent">
-          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Main</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="services.html" class="nav-link">Areas</a>
-            </li>
-            <li class="nav-item">
-              <a href="portfolio.html" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">News</a>
-            </li>
-            <li class="nav-item active">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
+        <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+              <li class="nav-item">
+              <a href="{{url('/')}}" class="nav-link">Main</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/about')}}" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/areas')}}" class="nav-link">Areas</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/projects')}}" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/news')}}" class="nav-link">News</a>
+              </li>
+              <li class="nav-item active">
+                <a href="{{url('/contact')}}" class="nav-link">Contact</a>
+              </li>
+
+              @if (Route::has('login'))
+                    @auth
+                    <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
+                    </li>
+                    @else
+                    <li>
+                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                    </li>
+                        @if (Route::has('register'))
+                        <li>
+                        <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
+                        @endif
+                    @endauth
+            @endif
+
+            </ul>
         </div>
       </div> <!-- .container -->
     </nav> <!-- .navbar -->
@@ -192,7 +211,7 @@
     </div>
   </footer>
 
-  
+
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
 <script src="../assets/js/bootstrap.bundle.min.js"></script>

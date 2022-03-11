@@ -62,7 +62,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-          <a style="font-size: 150%" href="../index.html" class="navbar-brand"
+          <a style="font-size: 150%" href="{{url('/')}}" class="navbar-brand"
             >Start<span class="text-primary">Hub</span></a
           >
 
@@ -80,23 +80,41 @@
           <div class="navbar-collapse collapse" id="navbarContent">
             <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
               <li class="nav-item">
-                <a href="../index.html" class="nav-link">Main</a>
+              <a href="{{url('/')}}" class="nav-link">Main</a>
               </li>
               <li class="nav-item">
-                <a href="../about.html" class="nav-link">About</a>
+                <a href="{{url('/about')}}" class="nav-link">About</a>
               </li>
               <li class="nav-item">
-                <a href="../services.html" class="nav-link">Areas</a>
+                <a href="{{url('/areas')}}" class="nav-link">Areas</a>
               </li>
               <li class="nav-item">
-                <a href="../portfolio.html" class="nav-link">Projects</a>
+                <a href="{{url('/projects')}}" class="nav-link">Projects</a>
               </li>
               <li class="nav-item">
-                <a href="../blog.html" class="nav-link">News</a>
+                <a href="{{url('/news')}}" class="nav-link">News</a>
               </li>
               <li class="nav-item">
-                <a href="../contact.html" class="nav-link">Contact</a>
+                <a href="{{url('/contact')}}" class="nav-link">Contact</a>
               </li>
+
+              @if (Route::has('login'))
+                    @auth
+                    <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
+                    </li>
+                    @else
+                    <li>
+                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                    </li>
+                        @if (Route::has('register'))
+                        <li>
+                        <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
+                        @endif
+                    @endauth
+            @endif
+
             </ul>
           </div>
         </div>
@@ -215,7 +233,7 @@
                       </div>
                     </div>
                     <div class="footer">
-                      <a href="../alif/alif.html"
+                      <a href="{{url('/finance/alif')}}"
                         >Read More
                         <span class="mai-chevron-forward text-sm"></span
                       ></a>

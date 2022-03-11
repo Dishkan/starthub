@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
+
     <meta name="copyright" content="MACode ID, https://macodeid.com/">
-  
+
     <title>StartHub</title>
-  
+
     <link rel="stylesheet" href="../assets/css/bootstrap.css">
-    
+
     <link rel="stylesheet" href="../assets/css/maicons.css">
-  
+
     <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-  
+
     <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
-  
+
     <link rel="stylesheet" href="../assets/vendor/fancybox/css/jquery.fancybox.css">
-  
+
     <link rel="stylesheet" href="../assets/css/theme.css">
-  
+
   </head>
 <body>
 
@@ -54,34 +54,53 @@
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a href="index.html" class="navbar-brand">Start<span class="text-primary">Hub</span></a>
-
+      <a style="font-size: 150%" href="{{url('/')}}" class="navbar-brand"
+            >Start<span class="text-primary">Hub</span></a
+          >
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="navbar-collapse collapse" id="navbarContent">
-          <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Main</a>
-            </li>
-            <li class="nav-item">
-              <a href="about.html" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-              <a href="services.html" class="nav-link">Areas</a>
-            </li>
-            <li class="nav-item">
-              <a href="portfolio.html" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a href="blog.html" class="nav-link">News</a>
-            </li>
-            <li class="nav-item">
-              <a href="contact.html" class="nav-link">Contact</a>
-            </li>
-          </ul>
-        </div>
+            <ul class="navbar-nav ml-auto pt-3 pt-lg-0">
+              <li class="nav-item active">
+                <a href="{{url('/')}}" class="nav-link">Main</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/about')}}" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/areas')}}" class="nav-link">Areas</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/projects')}}" class="nav-link">Projects</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/news')}}" class="nav-link">News</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{url('/contact')}}" class="nav-link">Contact</a>
+              </li>
+
+              @if (Route::has('login'))
+                    @auth
+                    <li class="nav-item">
+                        <a href="{{ url('/home') }}" class="nav-link">Dashboard</a>
+                    </li>
+                    @else
+                    <li>
+                    <a href="{{ route('login') }}" class="nav-link">Log in</a>
+                    </li>
+                        @if (Route::has('register'))
+                        <li>
+                        <a href="{{ route('register') }}" class="nav-link">Register</a>
+                        </li>
+                        @endif
+                    @endauth
+            @endif
+
+            </ul>
+          </div>
       </div> <!-- .container -->
     </nav> <!-- .navbar -->
   </header>
@@ -105,7 +124,7 @@
               <h1 class="post-title">How to growth your Business with scalable Employee</h1>
               <div class="post-meta">
                 <div class="post-author">
-                  <span class="text-grey">By</span> <a href="#">Admin</a>  
+                  <span class="text-grey">By</span> <a href="#">Admin</a>
                 </div>
                 <span class="gap">|</span>
                 <div class="post-date">
@@ -113,7 +132,7 @@
                 </div>
                 <span class="gap">|</span>
                 <div>
-                  <a href="#">StreetStyle</a>, <a href="#">Fashion</a>, <a href="#">Couple</a>  
+                  <a href="#">StreetStyle</a>, <a href="#">Fashion</a>, <a href="#">Couple</a>
                 </div>
                 <span class="gap">|</span>
                 <div class="post-comment-count">
@@ -150,7 +169,7 @@
                   <label for="website">Website</label>
                   <input type="url" class="form-control" id="website">
                 </div>
-    
+
                 <div class="form-group">
                   <label for="message">Message</label>
                   <textarea name="msg" id="message" cols="30" rows="8" class="form-control"></textarea>
@@ -158,11 +177,11 @@
                 <div class="form-group">
                   <input type="submit" value="Post Comment" class="btn btn-primary">
                 </div>
-    
+
               </form>
             </div> <!-- .comment-form-wrap -->
           </div>
-          
+
           <div class="col-lg-4">
             <div class="widget">
               <div class="widget-box">
@@ -186,7 +205,7 @@
                   <li><a href="#">Ocassion <span>14</span></a></li>
                 </ul>
               </div>
-  
+
               <div class="widget-box">
                 <h3 class="widget-title">Recent Blog</h3>
                 <div class="divider"></div>
@@ -221,7 +240,7 @@
                   </div>
                 </div>
               </div>
-  
+
               <div class="widget-box">
                 <h3 class="widget-title">Tag Cloud</h3>
                 <div class="divider"></div>
@@ -236,7 +255,7 @@
                   <a href="#" class="tag-cloud-link">drinks</a>
                 </div>
               </div>
-  
+
               <div class="widget-box">
                 <h3 class="widget-title">Paragraph</h3>
                 <div class="divider"></div>
@@ -244,7 +263,7 @@
               </div>
             </div>
           </div>
-          
+
         </div>
       </div> <!-- .container -->
     </div> <!-- .page-section -->
@@ -298,22 +317,22 @@
     </div>
   </footer>
 
-  
-<script src="../assets/js/jquery-3.5.1.min.js"></script>
 
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('assets/js/jquery-3.5.1.min.js')}}"></script>
 
-<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 
-<script src="../assets/vendor/wow/wow.min.js"></script>
+<script src="{{asset('assets/vendor/owl-carousel/js/owl.carousel.min.js')}}"></script>
 
-<script src="../assets/vendor/fancybox/js/jquery.fancybox.min.js"></script>
+<script src="{{asset('assets/vendor/wow/wow.min.js')}}"></script>
 
-<script src="../assets/vendor/isotope/isotope.pkgd.min.js"></script>
+<script src="{{asset('assets/vendor/fancybox/js/jquery.fancybox.min.js')}}"></script>
 
-<script src="../assets/js/google-maps.js"></script>
+<script src="{{asset('assets/vendor/isotope/isotope.pkgd.min.js')}}"></script>
 
-<script src="../assets/js/theme.js"></script>
+<script src="{{asset('assets/js/google-maps.js')}}"></script>
+
+<script src="{{asset('assets/js/theme.js')}}"></script>
 
 </body>
 </html>
