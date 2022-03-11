@@ -14,7 +14,36 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="{{route('founder')}}">Create a project</a>
+                </div>
+
+                <div class="card-body">
+                @if($projects)
+                <table style="width: 100%;">
+                 @foreach($projects as $project)
+                 <tr>
+                     <td>
+                         {{ $project->name }}
+                     </td>
+                     <td>
+                         {{ $project->description }}
+                     </td>
+                     <td>
+                         {{ $project->review }}
+                     </td>
+                     <td>
+                         {{ $project->achivements }}
+                     </td>
+                     <td>
+                         {{ $project->section }}
+                     </td>
+                     <td>
+                         {{ $project->photo }}
+                     </td>
+                 </tr>
+                 @endforeach
+                </table>
+                    @endif
                 </div>
             </div>
         </div>

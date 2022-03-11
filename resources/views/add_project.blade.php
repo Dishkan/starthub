@@ -3,12 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        <div>
+        <a href="{{route('home')}}">
+                <button type="button" class="btn btn-primary">Back</button>
+                </a>
+        </div>
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header">{{ __('Create a project') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="{{ route('project_store') }}">
                         @csrf
 
                         <div class="row mb-3">
@@ -26,12 +31,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <label for="description" class="col-md-4 col-form-label text-md-end">{{ __('Description') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                                <input id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" value="{{ old('description') }}" required autocomplete="description">
 
-                                @error('email')
+                                @error('description')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -40,14 +45,10 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="text" class="col-md-4 col-form-label text-md-end">{{ __('Type') }}</label>
+                            <label for="text" class="col-md-4 col-form-label text-md-end">{{ __('Review') }}</label>
                             <div class="col-md-6">
-                                <select id="type" name="type" type="text" class="form-control" value="User">
-                                <option>User</option>
-                                <option>Founder</option>
-                                <option>Business Mentor</option>
-                        </select>
-                                @error('type')
+                            <input id="review" type="text" class="form-control @error('review') is-invalid @enderror" name="review" value="{{ old('review') }}" required autocomplete="review">
+                                @error('review')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -56,12 +57,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <label for="achivements" class="col-md-4 col-form-label text-md-end">{{ __('Achivements') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                                <input id="achivements" type="text" class="form-control @error('achivements') is-invalid @enderror" name="achivements" required autocomplete="achivements">
 
-                                @error('password')
+                                @error('achivements')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -70,17 +71,31 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-end">{{ __('Confirm Password') }}</label>
+                            <label for="section" class="col-md-4 col-form-label text-md-end">{{ __('Section') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
+                                <input id="section" type="text" class="form-control @error('section') is-invalid @enderror" name="section" required autocomplete="section">
+
+                                @error('section')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="photo" class="col-md-4 col-form-label text-md-end">{{ __('Photo') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="photo" type="text" class="form-control" name="photo" required autocomplete="photo">
                             </div>
                         </div>
 
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                    {{ __('Create') }}
                                 </button>
                             </div>
                         </div>

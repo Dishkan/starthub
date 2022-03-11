@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('review');
             $table->string('achivements');
             $table->string('photo');
+            $table->string('section');
             $table->timestamps();
         });
     }

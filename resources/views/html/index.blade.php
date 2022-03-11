@@ -112,6 +112,11 @@
                         @endif
                     @endauth
             @endif
+            @if(Auth::user()) 
+            <a class="nav-link" href="{{route('home')}}" role="button">
+                                    {{ Auth::user()->name }}
+                                </a>
+            @endif
 
             </ul>
           </div>
