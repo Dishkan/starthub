@@ -66,6 +66,14 @@
                      <td>
                          {{ $project->photo }}
                      </td>
+                     <td>
+                         <a href="{{route('project_store')}}">
+                         <button class="btn btn-primary">Edit</button>
+                         </a>
+                     </td>
+                     <td>
+                         <button class="btn btn-danger">Delete</button>
+                     </td>
                  </tr>
                  @endforeach
                 </table>

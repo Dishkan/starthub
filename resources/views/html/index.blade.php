@@ -180,7 +180,7 @@
                 teachings of the great explorer of
               </p>
 
-              <a href="about.html" class="btn btn-primary mt-4" style="border-radius: 70px;">Read More</a>
+              <a href="{{url('/about')}}" class="btn btn-primary mt-4" style="border-radius: 70px;">Read More</a>
             </div>
             <div class="col-lg-6 py-3">
               <div class="about-img">
@@ -382,28 +382,13 @@
           <hr> </hr>
 
           <div class="row my-5 card-blog-row">
-            <div class="col-lg-6 py-6" style="text-align: center">
+          <div class="col-lg-6 py-6" style="text-align: center">
               <img
                 style="width: 500px; height: 400px; border-radius: 80px"
-                src="../assets/img/steps/mentoring.jpg"
+                src="../assets/img/finance/alif/competition.jpg"
                 alt=""
               />
             </div>
-            <div class="col-lg-6 py-6 mt-5" style="text-align: center">
-              <h2>Business Experts</h2>
-              <div class="row">
-                <div class="col-lg-12 py-12">
-                  <p style="font-size: 110%">
-                    You can find experts and experienced entrepreneurs and business people to get help and advice
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <hr> </hr>
-
-          <div class="row my-5 card-blog-row">
             <div class="col-lg-6 py-6 mt-5" style="text-align: center">
               <h2>Events and Competitions</h2>
               <div class="row">
@@ -414,130 +399,12 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-6 py-6" style="text-align: center">
-              <img
-                style="width: 500px; height: 400px; border-radius: 80px"
-                src="../assets/img/finance/alif/competition.jpg"
-                alt=""
-              />
-            </div>
           </div>
 
 
         </div>
         <!-- .container -->
       </div>
-
-
-      <div class="page-section">
-        <div class="container">
-          <div class="text-center">
-            <div class="subhead">Our Teams</div>
-            <h2 class="title-section">The Expert Team on StartHub</h2>
-          </div>
-
-          <div class="owl-carousel team-carousel mt-5">
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/paiziev.png" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Akmal Paiziev</h5>
-                <div class="text-sm fg-grey">
-                  Founder and CEO of Express24, MyTaxi, Workly
-                </div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/akilova.png" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Nigora Akilova</h5>
-                <div class="text-sm fg-grey">Founder of Arzon Apteka</div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/adhamov.jpg" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Laziz Adhamov</h5>
-                <div class="text-sm fg-grey">
-                  Founder of Bookcafe, Dalatek, Top-Contact
-                </div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- .container -->
-
-        <div class="container">
-          <div class="owl-carousel team-carousel mt-5">
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/salikhov.jpg" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Akmal Solikhov</h5>
-                <div class="text-sm fg-grey">Founder of VRonica</div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/rashidov.jpg" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Orian Mehroj Rashidov</h5>
-                <div class="text-sm fg-grey">
-                  Founder and CEO of Yoshtadbirkor University
-                </div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-
-            <div class="team-wrap">
-              <div class="team-profile" style="border-radius: 70px;">
-                <img src="../assets/img/teams/pulatov.jpeg" alt="" />
-              </div>
-              <div class="team-content">
-                <h5>Jahongir Pulatov</h5>
-                <div class="text-sm fg-grey">
-                  Founder and CEO of Cambridge Learning Centre
-                </div>
-
-                <div class="social-button">
-                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- .container -->
-      </div>
-      <!-- .page-section -->
 
       <div class="page-section">
         <div class="container">

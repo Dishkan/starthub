@@ -35,4 +35,16 @@ class FounderController extends Controller
         Project::create($request->all());
         return redirect('home');
     }
+
+    public function edit($id)
+    {
+        $project = Project::findOrFail($id);
+
+        return view('edit_project');
+    }
+
+    public function update($id, Request $request)
+    {
+
+    }
 }

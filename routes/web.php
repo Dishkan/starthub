@@ -42,7 +42,6 @@ Route::get('/show-single-news', function () {
     return view('html.blog-single');
 });
 
-
 Route::get('/finance', function () {
     return view('html.sections.finance');
 });
@@ -50,10 +49,10 @@ Route::get('/finance/alif', function () {
     return view('html.alif.alif');
 });
 
-
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/index', [App\Http\Controllers\FounderController::class, 'index'])->name('founder');
 Route::post('/store', [App\Http\Controllers\FounderController::class, 'store'])->name('project_store');
+Route::get('/{id}/edit', [App\Http\Controllers\FounderController::class, 'edit'])->name('project_edit');
