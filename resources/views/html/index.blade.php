@@ -412,16 +412,124 @@
             <div class="col-lg-6 py-6" style="text-align: center">
               <img
                 style="width: 500px; height: 400px; border-radius: 80px"
-                src="{{asset('assets/img/finance/alif/mentoring.jpg')}}"
+                src="../assets/img/steps/mentoring.jpg"
                 alt="business experts"
               />
             </div>
           </div>
-
-
         </div>
         <!-- .container -->
       </div>
+
+      <div class="page-section">
+        <div class="container">
+          <div class="text-center">
+            <div class="subhead">Our Teams</div>
+            <h2 class="title-section">The Expert Team on StartHub</h2>
+          </div>
+
+          <div class="owl-carousel team-carousel mt-5">
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/paiziev.png" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Akmal Paiziev</h5>
+                <div class="text-sm fg-grey">
+                  Founder and CEO of Express24, MyTaxi, Workly
+                </div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/akilova.png" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Nigora Akilova</h5>
+                <div class="text-sm fg-grey">Founder of Arzon Apteka</div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/adhamov.jpg" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Laziz Adhamov</h5>
+                <div class="text-sm fg-grey">
+                  Founder of Bookcafe, Dalatek, Top-Contact
+                </div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container -->
+
+        <div class="container">
+          <div class="owl-carousel team-carousel mt-5">
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/salikhov.jpg" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Akmal Solikhov</h5>
+                <div class="text-sm fg-grey">Founder of VRonica</div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/rashidov.jpg" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Orian Mehroj Rashidov</h5>
+                <div class="text-sm fg-grey">
+                  Founder and CEO of Yoshtadbirkor University
+                </div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-wrap">
+              <div class="team-profile" style="border-radius: 70px;">
+                <img src="../assets/img/teams/pulatov.jpeg" alt="" />
+              </div>
+              <div class="team-content">
+                <h5>Jahongir Pulatov</h5>
+                <div class="text-sm fg-grey">
+                  Founder and CEO of Cambridge Learning Centre
+                </div>
+
+                <div class="social-button">
+                  <a style="width: 100%; border-radius: 70px;" href="#"><span class="mai-mail"></span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- .container -->
+      </div>
+      <!-- .page-section -->
 
       <div class="page-section">
         <div class="container">
