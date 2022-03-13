@@ -344,7 +344,7 @@
               />
             </div>
             <div class="col-lg-6 py-6 mt-5" style="text-align: center">
-              <h2>Crowdfunding</h2>
+              <h2>Investments and donations</h2>
               <div class="row">
                 <div class="col-lg-12 py-12">
                   <p style="font-size: 110%" class="mt-2">
@@ -398,6 +398,23 @@
                   </p>
                 </div>
               </div>
+            </div>
+            <div class="col-lg-6 py-6 mt-5" style="text-align: center">
+              <h2>Business Experts</h2>
+              <div class="row">
+                <div class="col-lg-12 py-12">
+                  <p style="font-size: 110%">
+                    You can find experts and experienced entrepreneurs and business people to get help and advice
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 py-6" style="text-align: center">
+              <img
+                style="width: 500px; height: 400px; border-radius: 80px"
+                src="{{asset('assets/img/finance/alif/mentoring.jpg')}}"
+                alt="business experts"
+              />
             </div>
           </div>
 
